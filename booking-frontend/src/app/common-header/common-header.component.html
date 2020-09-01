@@ -1,0 +1,64 @@
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="navbar-brand">
+      <a class="navbar-header" href="/home">DanceLab</a>
+    </div>
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a *ngIf="isLoggedIn" class="nav-link" href="/member">Member Details</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a
+          *ngIf="isLoggedIn"
+          class="nav-link dropdown-toggle"
+          id="navbarDropdown"
+          role="button"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+          (click)="show = !show"
+          >Booking</a
+        >
+        <div
+          class="dropdown-menu"
+          aria-labelledby="navbarDropdown"
+          [ngClass]="{ show: show === true }"
+        >
+          <a class="dropdown-item" href="/course/browse"
+            >Book and Browse a Class</a
+          >
+          <a class="dropdown-item" href="#">Search for a Class</a>
+          <a class="dropdown-item" href="#">Check Booking Records</a>
+          <a class="dropdown-item" href="#">Buy/View Packages</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a
+          *ngIf="isLoggedIn"
+          class="nav-link"
+          href="/logout"
+          (click)="handleLogout()"
+          >Change Password</a
+        >
+      </li>
+    </ul>
+    <ul class="navbar-nav navbar-collapse justify-content-end">
+      <li>
+        <a
+          *ngIf="isLoggedIn"
+          class="nav-link"
+          href="/logout"
+          (click)="handleLogout()"
+          >Logout</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+<div *ngIf="isLoggedIn">
+  <div class="card-body">
+    <form class="form-group">
+      <div class="welcome">Welcome back {{ userDisplayName }}!</div>
+    </form>
+  </div>
+</div>

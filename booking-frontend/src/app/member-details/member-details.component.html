@@ -1,0 +1,37 @@
+<app-common-header></app-common-header>
+<div *ngIf="isLoggedIn">
+  <table style="width: 100%;" class="member-detail">
+    <tr class="member-detail-header">
+      <th>Member</th>
+      <th></th>
+    </tr>
+    <tr>
+      <td>Name</td>
+      <td>{{ currentMember.memberFullName }}</td>
+    </tr>
+    <tr>
+      <td>Tel</td>
+      <td>{{ currentMember.memberTel }}</td>
+    </tr>
+    <tr>
+      <td>Email Address</td>
+      <td>{{ currentMember.memberEmail }}</td>
+    </tr>
+    <tr>
+      <td>Birthday Month</td>
+      <td>{{ currentMember.memberBirthdayMonth }}</td>
+    </tr>
+    <tr>
+      <td>Birthday Date</td>
+      <td>{{ currentMember.memberBirthdayDate }}</td>
+    </tr>
+    <tr>
+      <td>Gender</td>
+      <td>{{ currentMember.memberGender }}</td>
+    </tr>
+    <tr>
+      <td>Address</td>
+      <td>{{ currentMember.memberAddress }}</td>
+    </tr>
+  </table>
+</div>

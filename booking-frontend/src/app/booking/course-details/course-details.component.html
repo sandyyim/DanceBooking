@@ -1,0 +1,62 @@
+<app-common-header></app-common-header>
+<br />
+<app-calendar-header
+  [(view)]="view"
+  [(viewDate)]="viewDate"
+  (viewDateChange)="fetchEvents()"
+  (viewChange)="fetchEvents()"
+>
+</app-calendar-header>
+
+<ng-template
+  #currentTimeMarkerTemplate
+  let-columnDate="columnDate"
+  let-dayStartHour="dayStartHour"
+  let-dayStartMinute="dayStartMinute"
+  let-dayEndHour="dayEndHour"
+  let-dayEndMinute="dayEndMinute"
+  let-isVisible="isVisible"
+  let-topPx="topPx"
+>
+  <!-- <div
+    class="cal-current-time-marker"
+    *ngIf="isVisible"
+    [style.top.px]="topPx"
+  ></div> -->
+</ng-template>
+
+<ng-template #loading>
+  <div class="text-center">
+    <i class="fas fa-spin fa-spinner fa-5x"></i> <br />
+    Loading events...
+  </div>
+</ng-template>
+
+<div *ngIf="events$ | async; else loading; let events">
+  <!-- <mwl-calendar-month-view
+      *ngSwitchCase="'month'"
+      [viewDate]="viewDate"
+      [events]="events"
+      [activeDayIsOpen]="activeDayIsOpen"
+      (dayClicked)="dayClicked($event.day)"
+      (eventClicked)="eventClicked($event.event)"
+    >
+    </mwl-calendar-month-view> -->
+  <mwl-calendar-week-view
+    [viewDate]="viewDate"
+    [events]="events"
+    (eventClicked)="eventClicked($event.event)"
+    [dayStartHour]="dayStartHour"
+    [dayEndHour]="dayEndHour"
+    [currentTimeMarkerTemplate]="currentTimeMarkerTemplate"
+  >
+  </mwl-calendar-week-view>
+  <!-- <mwl-calendar-day-view
+      [viewDate]="viewDate"
+      [events]="events"
+      (eventClicked)="eventClicked($event.event)"
+    >
+    </mwl-calendar-day-view> -->
+</div>
+<br />
+<!-- <app-course-booking [title]="title"></app-course-booking> -->

@@ -1,0 +1,46 @@
+.welcome {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  padding: 0rem;
+}
+
+.navbar-menu {
+  text-align: left;
+}
+
+.form-control {
+  display: block;
+  width: 100px;
+  padding: 0.375rem 0.375rem;
+  font-size: 1rem;
+  background-color: Transparent;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none !important;
+  background: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.select-button {
+  color: #495057;
+}
+
+.navbar-header {
+  color: #fff;
+}
+
+a:hover {
+  text-decoration: none !important;
+}

@@ -1,0 +1,30 @@
+.member-detail {
+  width: 300px;
+  height: 100px;
+  border: 1px solid #212529;
+  box-sizing: border-box;
+}
+
+.member-detail-header {
+  width: 300px;
+  /* height: 100px; */
+  background-color: #343a40;
+  color: white;
+  border: 1px solid #212529;
+  box-sizing: border-box;
+}
+
+.card-body {
+  -webkit-box-flex: 1;
+  padding: 0rem;
+}
+
+.welcome {
+  display: inline-block;
+  padding-top: 0.3125rem;
+  padding-bottom: 0.1rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  line-height: inherit;
+  white-space: nowrap;
+}

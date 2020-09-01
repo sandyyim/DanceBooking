@@ -1,0 +1,58 @@
+<app-common-header></app-common-header>
+<br />
+<table class="table">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">Booking Confirmation</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Course Name</th>
+      <td>{{ courseName }}</td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+    </tr>
+    <tr>
+      <th scope="row">Date</th>
+      <td>{{ courseDate }}</td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+    </tr>
+    <tr>
+      <th scope="row">Tutor</th>
+      <td>{{ tutor }}</td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+      <td class="table-border"></td>
+    </tr>
+    <tr>
+      <th scope="row">Points</th>
+      <td>{{ numberOfPoints }}</td>
+    </tr>
+    <tr>
+      <td>
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          (click)="bookCourse()"
+        >
+          Book
+        </button>
+      </td>
+      <td></td>
+    </tr>
+  </tbody>
+</table>
