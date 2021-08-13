@@ -6,7 +6,7 @@ It is used for students to enroll into classes for Dancing school based on their
 
 ## Getting Started
 ### Dependencies
-    Windows 10, Node.js, MySQL, Chrome
+    Windows 10, Node.js, MySQL, Chrome, IntelliJ or Eclipse, CMD
 
 ### Installing
 
